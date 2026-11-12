@@ -44,10 +44,11 @@ export default function Productos() {
 
   const handleVender = async (producto, cantidad) => {
     try {
-      await venderProducto(producto.id, cantidad, usuario?.id ?? null);
+      // La base de datos devuelve la venta registrada, con el total que quedó guardado
+      const venta = await venderProducto(producto.id, cantidad, usuario?.id ?? null);
       setAviso({
         tipo: "success",
-        texto: `Listo: ${cantidad} × ${producto.nombre} por ${formatPrecio(producto.precio_publico * cantidad)}`,
+        texto: `Compra lista: ${cantidad} × ${producto.nombre}. Total pagado: ${formatPrecio(venta.total)}`,
       });
       recargar(); // refresca inventario disponible
     } catch (err) {

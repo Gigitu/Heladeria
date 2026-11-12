@@ -58,7 +58,11 @@ export default function ProductoCard({ producto, onVender, esMasRentable = false
         <div className="mt-auto pt-2 d-flex flex-wrap align-items-center justify-content-between gap-2">
           <Link to={`/productos/${producto.id}`} className="small fw-bold">Ver más</Link>
           {can("vender") && onVender && (
-            <VenderControl maximo={disponibles} onVender={(cant) => onVender(producto, cant)} />
+            <VenderControl
+              maximo={disponibles}
+              precio={producto.precio_publico}
+              onVender={(cant) => onVender(producto, cant)}
+            />
           )}
         </div>
       </div>

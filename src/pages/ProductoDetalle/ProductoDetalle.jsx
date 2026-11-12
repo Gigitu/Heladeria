@@ -40,8 +40,12 @@ export default function ProductoDetalle() {
 
   const handleVender = async (cantidad) => {
     try {
-      await venderProducto(producto.id, cantidad, usuario?.id ?? null);
-      setAviso({ tipo: "success", texto: `✅ Vendiste ${cantidad} × ${producto.nombre}` });
+      // La base de datos devuelve la venta registrada, con el total que quedó guardado
+      const venta = await venderProducto(producto.id, cantidad, usuario?.id ?? null);
+      setAviso({
+        tipo: "success",
+        texto: `Compra lista: ${cantidad} × ${producto.nombre}. Total pagado: ${formatPrecio(venta.total)}`,
+      });
       recargar();
     } catch (err) {
       setAviso({ tipo: "danger", texto: `❌ ${err.message}` });
@@ -80,7 +84,11 @@ export default function ProductoDetalle() {
               </p>
               <p className="fs-3 fw-bold precio mb-3">{formatPrecio(producto.precio_publico)}</p>
               {can("vender") && (
-                <VenderControl maximo={unidadesDisponibles(producto.ingredientes)} onVender={handleVender} />
+                <VenderControl
+                  maximo={unidadesDisponibles(producto.ingredientes)}
+                  precio={producto.precio_publico}
+                  onVender={handleVender}
+                />
               )}
             </div>
           </div>

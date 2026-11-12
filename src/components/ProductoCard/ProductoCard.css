@@ -98,3 +98,14 @@
 .vender-control {
   width: 160px;
 }
+
+.total-compra {
+  font-size: 0.9rem;
+  color: var(--tinta);
+}
+
+.total-compra strong {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.15rem;
+  color: var(--mango-oscuro);
+}
