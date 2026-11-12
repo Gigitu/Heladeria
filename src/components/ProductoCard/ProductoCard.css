@@ -1,0 +1,100 @@
+.producto-card {
+  position: relative;
+  background: #fffdf8;
+  border: 2px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transform: rotate(-0.6deg);
+  transition: transform 0.15s;
+}
+
+/* Unas tarjetas se tuercen para un lado y otras para el otro */
+.col-producto:nth-child(even) .producto-card {
+  transform: rotate(0.7deg);
+}
+
+.col-producto .producto-card:hover {
+  transform: rotate(0deg) translateY(-3px);
+}
+
+.producto-card.mas-rentable {
+  background: #fff6dc;
+}
+
+.ribbon {
+  position: absolute;
+  top: -12px;
+  right: 10px;
+  z-index: 1;
+  padding: 2px 10px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1rem;
+  background: var(--limon);
+  color: var(--tinta);
+  border: 2px solid var(--tinta);
+  transform: rotate(3deg);
+}
+
+.producto-hero {
+  display: grid;
+  place-items: center;
+  height: 110px;
+  font-size: 54px;
+  border-bottom: 2px solid var(--tinta);
+  border-radius: 4px 4px 0 0;
+}
+
+/* Fondos a rayas según el tipo */
+.producto-copa {
+  background: repeating-linear-gradient(90deg, #f7d6c8 0 14px, #fbe8de 14px 28px);
+}
+
+.producto-malteada {
+  background: repeating-linear-gradient(90deg, #d7e6c9 0 14px, #e8f1df 14px 28px);
+}
+
+.precio {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.35rem;
+  color: var(--mango-oscuro);
+  white-space: nowrap;
+}
+
+.chip-ing {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 1px 8px;
+  border-radius: 3px;
+  border: 1.5px dashed;
+}
+
+.chip-base {
+  background: #fdf0d2;
+  border-color: #b08a3c;
+  color: #6b4f12;
+}
+
+.chip-complemento {
+  background: #eaf2e3;
+  border-color: var(--pistacho-oscuro);
+  color: #3d5a30;
+}
+
+.metricas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding: 6px 0;
+  border-top: 1.5px dashed #cdb994;
+  border-bottom: 1.5px dashed #cdb994;
+  font-size: 0.9rem;
+}
+
+.metricas small {
+  color: var(--tinta-suave);
+  margin-right: 4px;
+}
+
+.vender-control {
+  width: 160px;
+}

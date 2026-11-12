@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Velluto</title>
+  <!-- cono -->
+  <path d="M19 30 L32 61 L45 30 Z" fill="#f3c969" stroke="#33231a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M24 34 L38 46 M27 42 L36 50 M40 34 L26 46" stroke="#33231a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- bola de mango que se derrite -->
+  <path d="M15 30 C13 18 22 9 32 9 C42 9 51 18 49 30 C47 30 46 35 44 35 C42 35 42 30 40 30 L28 30 C26 30 26 38 24 38 C22 38 22 30 15 30 Z"
+        fill="#e4572e" stroke="#33231a" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- brillito -->
+  <path d="M23 18 C25 15 28 14 30 14" stroke="#fbf4e6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- cereza -->
+  <circle cx="38" cy="8" r="4" fill="#7fa66a" stroke="#33231a" stroke-width="2"/>
+</svg>

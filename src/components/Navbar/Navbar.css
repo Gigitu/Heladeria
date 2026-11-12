@@ -1,0 +1,69 @@
+.barra {
+  background: var(--tinta);
+  position: relative;
+}
+
+/* Toldo a rayas debajo de la barra, como un kiosko */
+.barra::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  height: 12px;
+  background:
+    radial-gradient(circle at 10px 0, var(--mango) 10px, transparent 10.5px) 0 0 / 40px 12px repeat-x,
+    radial-gradient(circle at 30px 0, var(--papel) 10px, transparent 10.5px) 0 0 / 40px 12px repeat-x;
+}
+
+.barra .navbar-brand {
+  color: var(--papel);
+}
+
+.nombre-tienda {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.barra .nav-link {
+  color: #e9dcc4;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+.barra .nav-link:hover {
+  color: #fff;
+}
+
+.barra .nav-link.active {
+  color: var(--limon);
+  border-bottom-color: var(--limon);
+}
+
+.barra .navbar-text {
+  color: #e9dcc4;
+}
+
+.barra .navbar-toggler {
+  border: 2px solid var(--papel);
+}
+
+.barra .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.barra .btn-outline-primary {
+  --bs-btn-color: var(--papel);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--papel);
+}
+
+.rol-badge {
+  font-weight: 700;
+  border: 1px solid var(--papel);
+}
+
+.rol-admin { background: var(--mango); }
+.rol-empleado { background: var(--pistacho-oscuro); }
+.rol-cliente { background: #8a6d9e; }

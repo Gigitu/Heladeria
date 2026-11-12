@@ -1,0 +1,45 @@
+/* Cartel de bienvenida */
+.portada {
+  position: relative;
+  margin: 1rem 0 2.5rem;
+  padding: 2rem 1.75rem;
+  background: var(--limon);
+  border: 2px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: 6px 6px 0 var(--tinta);
+}
+
+.portada h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 0.25rem;
+}
+
+.portada .lema {
+  font-size: 1.15rem;
+  max-width: 34ch;
+}
+
+.portada img {
+  transform: rotate(8deg);
+}
+
+/* Botones Todos / Copas / Malteadas */
+.filtro-tipo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Sticker "Abierto" */
+.sticker {
+  position: absolute;
+  top: -14px;
+  left: 18px;
+  padding: 2px 12px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.1rem;
+  background: var(--pistacho);
+  color: #fff;
+  border: 2px solid var(--tinta);
+  transform: rotate(-4deg);
+}

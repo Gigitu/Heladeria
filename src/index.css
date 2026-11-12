@@ -1,0 +1,158 @@
+/* Estilo "kiosko de barrio": papel, tinta café y bordes gruesos */
+:root {
+  --tinta: #33231a;
+  --tinta-suave: #7a6555;
+  --papel: #fbf4e6;
+  --papel-2: #f3e7cf;
+  --mango: #e4572e;
+  --mango-oscuro: #b8411d;
+  --pistacho: #7fa66a;
+  --pistacho-oscuro: #557a43;
+  --limon: #f3c969;
+  --sombra: 4px 4px 0 var(--tinta);
+  --radio: 6px;
+
+  --bs-primary: var(--mango);
+  --bs-primary-rgb: 228, 87, 46;
+  --bs-link-color: var(--mango-oscuro);
+  --bs-link-color-rgb: 184, 65, 29;
+  --bs-link-hover-color: var(--tinta);
+  --bs-body-color: var(--tinta);
+  --bs-body-bg: var(--papel);
+  --bs-border-color: #d8c7a8;
+  --bs-border-radius: var(--radio);
+  --bs-border-radius-sm: 4px;
+  --bs-border-radius-lg: 8px;
+  --bs-font-sans-serif: "Karla", system-ui, "Segoe UI", sans-serif;
+}
+
+body {
+  /* puntitos como papel de cuaderno */
+  background-color: var(--papel);
+  background-image: radial-gradient(#e2d3b6 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, .h1, .h2, .h3, .h4, .h5, .display-5 {
+  font-family: "Patrick Hand", "Comic Sans MS", cursive;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--tinta);
+}
+
+/* Todas las tarjetas: borde grueso y sombra dura */
+.hoja {
+  background: #fffdf8;
+  border: 2px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* Botones */
+.btn {
+  border-width: 2px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--mango);
+  --bs-btn-border-color: var(--tinta);
+  --bs-btn-hover-bg: var(--mango-oscuro);
+  --bs-btn-hover-border-color: var(--tinta);
+  --bs-btn-active-bg: var(--mango-oscuro);
+  --bs-btn-active-border-color: var(--tinta);
+  --bs-btn-disabled-bg: var(--mango);
+  --bs-btn-disabled-border-color: var(--tinta);
+  --bs-btn-focus-shadow-rgb: 228, 87, 46;
+  box-shadow: 2px 2px 0 var(--tinta);
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  --bs-btn-color: var(--tinta);
+  --bs-btn-border-color: var(--tinta);
+  --bs-btn-bg: #fffdf8;
+  --bs-btn-hover-color: var(--tinta);
+  --bs-btn-hover-bg: var(--limon);
+  --bs-btn-hover-border-color: var(--tinta);
+  --bs-btn-active-color: var(--tinta);
+  --bs-btn-active-bg: var(--limon);
+  --bs-btn-active-border-color: var(--tinta);
+}
+
+.btn-outline-danger {
+  --bs-btn-bg: #fffdf8;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid #cdb994;
+  background-color: #fffdf8;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--tinta);
+  box-shadow: 3px 3px 0 var(--limon);
+}
+
+.form-check-input:checked {
+  background-color: var(--pistacho-oscuro);
+  border-color: var(--pistacho-oscuro);
+}
+
+.alert {
+  border: 2px solid currentColor;
+  border-radius: var(--radio);
+}
+
+.badge {
+  border-radius: 3px;
+}
+
+.table {
+  --bs-table-bg: transparent;
+}
+
+.table thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--tinta);
+}
+
+.table-light {
+  --bs-table-bg: var(--papel-2);
+}
+
+.progress {
+  border: 2px solid var(--tinta);
+  border-radius: 3px;
+  background: #fffdf8;
+  height: 14px;
+}
+
+.progress-bar {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--pistacho),
+    var(--pistacho) 6px,
+    var(--pistacho-oscuro) 6px,
+    var(--pistacho-oscuro) 12px
+  );
+}
+
+.spinner-border.text-primary {
+  color: var(--mango) !important;
+}
